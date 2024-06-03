@@ -8,7 +8,7 @@ require('dotenv').config()
 require('./config/passport')(passport);
 const app = express();
 app.use(express.json());
-app.use(cors({origin:'http://localhost:3000'}))
+app.use(cors({origin:'https://movies-library-ruby.vercel.app'}))
 app.use(session({
   secret: 'secret',
   resave: false,
