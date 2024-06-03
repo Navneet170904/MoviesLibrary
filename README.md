@@ -11,13 +11,13 @@ A MERN Stack MovieLibrary app where you can search your favourite movies and cre
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Navneet170904/MoviesLibrary.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  cd MoviesLibrary
 ```
 
 Open two terminals
