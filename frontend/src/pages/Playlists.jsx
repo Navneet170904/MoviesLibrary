@@ -17,7 +17,7 @@ const Playlist = () => {
 
   const fetchPlaylists = () => {
     axios
-      .get(`http://localhost:5000/api/playlist/${userId}`)
+      .get(`https://movieslibrarybackend.onrender.com/api/playlist/${userId}`)
       .then((response) => {
         // Filter playlists based on the owner ID
         const userPlaylists = response.data.filter(
@@ -40,7 +40,7 @@ const Playlist = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/api/deletePlaylist/${id}/${userId}`)
+      .delete(`https://movieslibrarybackend.onrender.com/api/deletePlaylist/${id}/${userId}`)
       .then(() => {
         setPlaylists((prevPlaylists) =>
           prevPlaylists.filter((playlist) => playlist._id !== id)
@@ -54,7 +54,7 @@ const Playlist = () => {
   const fetchMovieDetails = async (movieIds) => {
     try {
       const movieDetailsPromises = movieIds.map((id) =>
-        axios.get(`http://localhost:5000/api/movie/${id}`)
+        axios.get(`https://movieslibrarybackend.onrender.com/api/movie/${id}`)
       );
       const movieDetailsResponses = await Promise.all(movieDetailsPromises);
       const movieDetails = movieDetailsResponses.map(response => response.data);
