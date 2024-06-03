@@ -39,7 +39,7 @@ export default function Example({ addPlaylist, userId }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/addPlaylist",
+        "https://movieslibrarybackend.onrender.com/api/addPlaylist",
         { ...formData, owner: userId } 
       );
       console.log("Form data successfully sent to the backend!", response.data);
