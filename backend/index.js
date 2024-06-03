@@ -8,7 +8,7 @@ require('dotenv').config()
 require('./config/passport')(passport);
 const app = express();
 app.use(express.json());
-app.use(cors({origin:*}))
+app.use(cors({origin:"https://movies-library-clfjusazk-navneet-kumar-yadav-s-projects.vercel.app"}))
 app.use(session({
   secret: 'secret',
   resave: false,
