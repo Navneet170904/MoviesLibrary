@@ -10,6 +10,7 @@ const Signup = () => {
     e.preventDefault();
     const response = await fetch('https://movieslibrarybackend.onrender.com/auth/register', {
       method: 'POST',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
