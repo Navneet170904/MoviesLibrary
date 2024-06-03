@@ -18,7 +18,7 @@ const Details = ({ open, setOpen, movieData }) => {
   useEffect(() => {
     if (showPlaylistModal) {
       axios
-        .get(`http://localhost:5000/api/playlist/${userId}`)
+        .get(`https://movieslibrarybackend.onrender.com/api/playlist/${userId}`)
         .then((response) => {
           setPlaylists(response.data);
         })
@@ -34,7 +34,7 @@ const Details = ({ open, setOpen, movieData }) => {
     if (selectedPlaylist) {
       axios
         .post(
-          `http://localhost:5000/api/playlists/${selectedPlaylist}/${userId}/addMovie`,
+          `https://movieslibrarybackend.onrender.com/api/playlists/${selectedPlaylist}/${userId}/addMovie`,
           movieData
         )
         .then((response) => {
@@ -54,7 +54,7 @@ const Details = ({ open, setOpen, movieData }) => {
   const handleCreatePlaylist = () => {
     if (newPlaylistName) {
       axios.
-      post("http://localhost:5000/api/addPlaylist", {
+      post("https://movieslibrarybackend.onrender.com/api/addPlaylist", {
         playlistName: newPlaylistName,
         owner: userId,
       })
